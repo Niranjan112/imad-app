@@ -5,21 +5,46 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
-    title: 'Article-one | Niranjan Sharma',
-    heading: 'About Article-one',
+var articles =
+{
+     articleOne: {
+        title: 'Article-one | Niranjan Sharma',
+        heading: 'About Article-one',
+        date: 'Sep 18,2017',
+        content: `<div>
+                <p>
+                    This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. 
+                </p>
+                
+                <p>
+                    This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. 
+                </p>
+            </div>`
+        },
+    
+     articleTwo: {
+    title: 'Article-two | Niranjan Sharma',
+    heading: 'About Article-two',
+    date: 'Sep 18,2017',
+    content:` 
+        <div>
+            <p>
+                This is my second article..........  
+            </p>
+        </div>
+    `},
+    
+     articleThree: {
+    title: 'Article-three | Niranjan Sharma',
+    heading: 'About Article-three',
     date: 'Sep 18,2017',
     content: `
         <div>
             <p>
-                This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. 
-            </p>
-            
-            <p>
-                This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. This is my article. 
+                This is my third article..........  
             </p>
         </div>
-        `
+    `}
 };
 
 function createTemplate(data)
